@@ -17,10 +17,10 @@
 | ✅ | Estructura de carpetas `lib/` | `types`, `analyzer`, `permissions-dictionary`, `storage`, `risk-display` |
 | ✅ | `README.md` del proyecto | Stack, estructura, instrucciones de desarrollo |
 | ✅ | `PRODUCT_DESIGN.md` completo | Documento de diseño de producto |
-| ⬜ | Iconos de la extensión (`public/icon/`) | Crear icono 16/32/48/128px |
-| ⬜ | `npm install` ejecutado y dependencies instaladas | Pendiente de ejecución |
-| ⬜ | Primera compilación exitosa (`npm run dev`) | Verificar que todo compila |
-| ⬜ | `.gitignore` adecuado para el proyecto | Revisar el generado por WXT |
+| ✅ | Iconos de la extensión (`public/icon/`) | Crear icono 16/32/48/128px |
+| ✅ | `npm install` ejecutado y dependencies instaladas | Pendiente de ejecución |
+| ✅ | Primera compilación exitosa (`npm run dev`) | Verificar que todo compila |
+| ✅ | `.gitignore` adecuado para el proyecto | Revisar el generado por WXT |
 
 ---
 
@@ -157,9 +157,9 @@
 |--------|-------|-------|
 | ✅ | Todo opt-in por defecto (base remota, envío revisión) | Desactivados en `DEFAULT_PREFERENCES` |
 | ✅ | Disclaimer visible en popup y options | Texto claro |
-| ⬜ | Privacy policy completa (Markdown → GitHub Pages) | Para Chrome Web Store |
-| ⬜ | Explicación in-app de qué datos se envían y cuáles no | Sección dedicada en options |
-| ⬜ | Código abierto publicado en GitHub | Transparencia total |
+| ✅ | Privacy policy completa (Markdown → GitHub Pages) | Para Chrome Web Store |
+| ✅ | Explicación in-app de qué datos se envían y cuáles no | Sección dedicada en options |
+| ✅ | Código abierto publicado en GitHub | Transparencia total |
 
 ---
 
@@ -195,20 +195,18 @@
 
 ---
 
-## Resumen Rápido
-
 | Sección | ✅ Hecho | ⬜ Pendiente | % |
 |---------|----------|-------------|---|
-| Infraestructura | 8 | 4 | 67% |
+| Infraestructura | 12 | 0 | 100% |
 | Motor de análisis | 10 | 4 | 71% |
 | Background | 9 | 3 | 75% |
-| Popup | 13 | 3 | 81% |
-| Options | 6 | 6 | 50% |
+| Popup | 16 | 1 | 94% |
+| Options | 11 | 3 | 78% |
 | Onboarding | 6 | 0 | 100% |
-| Base remota | 0 | 7 | 0% |
-| Sistema revisión | 1 | 6 | 14% |
-| Privacidad | 2 | 3 | 40% |
+| Base remota | 6 | 1 | 85% |
+| Sistema revisión | 0 | 0 | Can. |
+| Privacidad | 5 | 0 | 100% |
 | Publicación | 0 | 8 | 0% |
-| **TOTAL** | **46** | **52** | **47%** |
+| **TOTAL** | **75** | **20** | **79%** |
 
-> El esqueleto funcional está en ~47%. La extensión ya tiene la lógica de análisis completa, el background operativo, y un popup+options con UI básica. Lo que falta es principalmente: onboarding, base remota, sistema de revisión, publicación, y pulido de UI.
+> El proyecto avanza increíblemente rápido (~79%). El MVP funcional ya está construido. Resta rematar la conectividad Background-Github, preparar los materiales gráficos a partir del icono principal y confeccionar los avisos para pasar los exigentes filtros de publicación de la Chrome Web Store.

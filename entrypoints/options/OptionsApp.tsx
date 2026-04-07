@@ -185,6 +185,12 @@ export default function OptionsApp() {
 
         {/* ── Privacidad ──────────────────────────────────── */}
         <Section title="Privacidad y datos" icon="🔒">
+          <div className="p-3 rounded-lg bg-blue-900/20 border border-blue-800/30">
+            <p className="text-sm font-medium text-blue-300 mb-1">Transparencia Total</p>
+            <p className="text-xs text-slate-300">
+              Extension Doctor funciona de manera 100% local. <strong>No procesamos, enviamos ni almacenamos tus datos en ningún servidor.</strong> La consulta a la base remota consiste únicamente en descargar un directorio público para compararlo en tu equipo.
+            </p>
+          </div>
           <ToggleOption
             label="Consultar base de conocimiento remota"
             description="Descarga datos de VirusTotal desde GitHub para enriquecer el análisis. No se envía ninguna información personal."
