@@ -1,6 +1,7 @@
-# Extension Doctor
+# Extension Doctor & Extension Doctor DB
 
 > Audita los permisos de tus extensiones de Chrome y muestra un análisis de riesgo heurístico claro y humano.
+> Adicionalmente contiene la base de datos automatizada y cola de revisiones, incluyendo metadatos, permisos, notas de riesgo y artefactos de análisis.
 
 ## ⚠️ Disclaimer
 
