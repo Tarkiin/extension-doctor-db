@@ -87,14 +87,18 @@ async function fetchRemoteDB(): Promise<void> {
     console.log('[Extension Doctor] Descargando base de datos maestra desde Github...');
     const res = await fetch(REMOTE_DB_URL);
     if (!res.ok) throw new Error('HTTP ' + res.status);
-    
+
+    const raw = await res.json();
+
+    // Soporta tanto el formato antiguo (array directo) como el nuevo ({ generatedAt, entries: [] })
+    const arrayData: RemoteKnowledgeEntry[] = Array.isArray(raw) ? raw : (raw.entries ?? []);
+
     // Convertir de Array a Diccionario (hashmap) para Búsqueda Rápida (O(1))
-    const arrayData = await res.json() as RemoteKnowledgeEntry[];
     const knowledgeMap: Record<string, RemoteKnowledgeEntry> = {};
     for (const entry of arrayData) {
       knowledgeMap[entry.extensionId] = entry;
     }
-    
+
     await saveRemoteKnowledge(knowledgeMap);
     console.log(`✅ [Extension Doctor] Base Remota sincronizada: ${Object.keys(knowledgeMap).length} extensiones firmadas por VirusTotal.`);
   } catch (err) {
